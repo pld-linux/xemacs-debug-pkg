@@ -9,7 +9,7 @@ Summary(pl):	GUD, gdb, dbx debugging support.
 
 Name:    	xemacs-debug-pkg
 %define 	srcname	debug
-Version: 	1.10
+Version: 	1.11
 Release:	1
 
 ### Preamble
@@ -31,24 +31,6 @@ Requires: 	xemacs-base-pkg
 %description -l pl 
 
 
-%package el
-Summary: 	GUD, gdb, dbx debugging support. This package contains .el files
-Summary(pl):	GUD, gdb, dbx debugging support. Pliki ¿ród³owe .el
-
-### ElPreamble
-Group:    	Applications/Editors/Emacs
-Group(pl):	Aplikacje/Edytory/Emacs
-Requires: 	%{name} = %{version}
-### EndElPreamble
-
-
-%description el
-.el source files -- not necessary to run XEmacs
-
-%description el -l pl
-Pliki ¼ród³owe procedur w eLispie do XEmacsa.
-
-
 ### Main
 %prep
 %setup -q -c
@@ -57,6 +39,7 @@ Pliki ¼ród³owe procedur w eLispie do XEmacsa.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/xemacs-packages
 cp -a * $RPM_BUILD_ROOT%{_datadir}/xemacs-packages
+gzip -9nf lisp/debug/ChangeLog 
 
 %clean
 rm -fr $RPM_BUILD_ROOT
@@ -67,5 +50,8 @@ rm -fr $RPM_BUILD_ROOT
 
 ### Files
 %files
-%{_datadir}/xemacs-packages/lisp/*
+%defattr(644,root,root,755)
+%dir %{_datadir}/xemacs-packages/lisp/*
+%{_datadir}/xemacs-packages/lisp/*/*.elc
+%doc lisp/debug/ChangeLog.gz 
 ### EndFiles
