@@ -2,7 +2,7 @@ Summary:	GUD, gdb, dbx debugging support
 Summary(pl):	GUD, gdb, dbx debugging support
 Name:		xemacs-debug-pkg
 %define 	srcname	debug
-Version:	1.11
+Version:	1.12
 Release:	1
 License:	GPL
 Group:		Applications/Editors/Emacs
