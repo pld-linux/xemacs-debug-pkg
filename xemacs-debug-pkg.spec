@@ -17,7 +17,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 GUD, gdb, dbx debugging support.
 
-%description -l pl 
+%description -l pl
 Makra do obs³ugi odpluskwiaczy GUD, gdb, dbx.
 
 %prep
@@ -29,13 +29,13 @@ install -d $RPM_BUILD_ROOT%{_datadir}/xemacs-packages
 
 cp -a * $RPM_BUILD_ROOT%{_datadir}/xemacs-packages
 
-gzip -9nf lisp/debug/ChangeLog 
+gzip -9nf lisp/debug/ChangeLog
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc lisp/debug/ChangeLog.gz 
+%doc lisp/debug/ChangeLog.gz
 %dir %{_datadir}/xemacs-packages/lisp/*
 %{_datadir}/xemacs-packages/lisp/*/*.elc
