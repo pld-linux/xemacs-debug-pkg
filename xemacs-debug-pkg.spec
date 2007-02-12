@@ -1,5 +1,5 @@
 Summary:	GUD, gdb, dbx debugging support macros
-Summary(pl.UTF-8):   Makra do obsługi odpluskwiaczy GUD, gdb, dbx
+Summary(pl.UTF-8):	Makra do obsługi odpluskwiaczy GUD, gdb, dbx
 Name:		xemacs-debug-pkg
 %define 	srcname	debug
 Version:	1.17
