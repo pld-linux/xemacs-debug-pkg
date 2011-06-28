@@ -2,12 +2,12 @@ Summary:	GUD, gdb, dbx debugging support macros
 Summary(pl.UTF-8):	Makra do obsługi odpluskwiaczy GUD, gdb, dbx
 Name:		xemacs-debug-pkg
 %define 	srcname	debug
-Version:	1.17
-Release:	2
+Version:	1.18
+Release:	1
 License:	GPL
 Group:		Applications/Editors/Emacs
 Source0:	http://ftp.xemacs.org/xemacs/packages/%{srcname}-%{version}-pkg.tar.gz
-# Source0-md5:	e45715132f64e4dbc7f14a22128b9279
+# Source0-md5:	870bec038627d006e9a255c9f3aa7310
 URL:		http://www.xemacs.org/
 BuildArch:	noarch
 Conflicts:	xemacs-sumo
